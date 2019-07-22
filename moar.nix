@@ -1,11 +1,12 @@
 version:
-{stdenv, fetchurl, perl}:
+{stdenv, fetchgit, perl}:
 stdenv.mkDerivation rec {
     name = "MoarVM-${version}";
     inherit version;
-    src = fetchurl {
-        url    = "https://moarvm.org/releases/${name}.tar.gz";
-        sha256 = "017w1zvr6yl0cgjfc1b3ddlc6vjw9q8p7alw1vvsckw95190xc14";
+    src = fetchgit {
+        url    = "https://github.com/MoarVM/MoarVM.git";
+        rev    = version;
+        sha256 = "19hfgvx3bhs2vb0x6fggfgz69nbf5f8742s73cscbnywj4n860j1";
     };
     buildInputs = [perl];
     configureScript = "perl ./Configure.pl";

@@ -1,11 +1,12 @@
 version:
-{stdenv, fetchurl, moar, perl}:
+{stdenv, fetchgit, moar, perl}:
 stdenv.mkDerivation rec {
     name = "nqp-${version}";
     inherit version;
-    src = fetchurl {
-        url    = "https://github.com/perl6/nqp/archive/${version}.tar.gz";
-        sha256 = "0qv8pz9is228gy8qyq1r3zcvp1dz3vnyxmfigxwk8zsny3l6s8jz";
+    src = fetchgit {
+        url    = "https://github.com/perl6/nqp.git";
+        rev    = version;
+        sha256 = "1v3i05ghk8i9y1ikjb6629hl5dg9f7hnkarc0vzpymlyij3077m5";
     };
     buildInputs = [moar perl];
     configureScript = "perl ./Configure.pl";

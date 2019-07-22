@@ -1,11 +1,12 @@
 version:
-{stdenv, fetchurl, nqp, perl}:
+{stdenv, fetchgit, nqp, perl}:
 stdenv.mkDerivation rec {
     name = "rakudo-${version}";
     inherit version;
-    src = fetchurl {
-        url    = "https://rakudostar.com/files/rakudo/${name}.tar.gz";
-        sha256 = "13ap3fj1kkfj300nnkvv2f1b1bsa9qg8a1g4y2p6fk2grwy24pfx";
+    src = fetchgit {
+        url    = "https://github.com/rakudo/rakudo.git";
+        rev    = version;
+        sha256 = "0hgfl23zib9s0g6i4xrljvamqgi72sgfby1lhb2khwg492vsa4i6";
     };
     buildInputs = [nqp perl];
     configureScript = "perl ./Configure.pl";
