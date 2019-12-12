@@ -6,7 +6,7 @@ stdenv.mkDerivation rec {
     src = fetchgit {
         url    = "https://github.com/MoarVM/MoarVM.git";
         rev    = version;
-        sha256 = "19hfgvx3bhs2vb0x6fggfgz69nbf5f8742s73cscbnywj4n860j1";
+        sha256 = "1nkbzrhpspyxs68zip24f98g2yqz5v3znhxrykzp3ll1772ndb32";
     };
     buildInputs = [perl];
     configureScript = "perl ./Configure.pl";

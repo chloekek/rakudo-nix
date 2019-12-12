@@ -6,7 +6,7 @@ stdenv.mkDerivation rec {
     src = fetchgit {
         url    = "https://github.com/perl6/nqp.git";
         rev    = version;
-        sha256 = "1v3i05ghk8i9y1ikjb6629hl5dg9f7hnkarc0vzpymlyij3077m5";
+        sha256 = "1p3v0hfzf6p9xpm5k895xh5fkz5x6w3c6bn8yvpb8im89zq3mmcc";
     };
     buildInputs = [moar perl];
     configureScript = "perl ./Configure.pl";
