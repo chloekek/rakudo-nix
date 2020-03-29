@@ -6,7 +6,7 @@ stdenv.mkDerivation rec {
     src = fetchgit {
         url    = "https://github.com/rakudo/rakudo.git";
         rev    = version;
-        sha256 = "17226ccmnv83lx9c2v6ilrad3dd00c4lrnxjs23k5dwli79bkjf0";
+        sha256 = "1snqr39gyay4qnsk87w29bphk9bk1m313lz66zg6ldypv1hcd2pb";
     };
     buildInputs = [nqp perl];
     configureScript = "perl ./Configure.pl";
