@@ -1,3 +1,8 @@
+# NOTE
+
+rakudo-nix is no longer necessary.
+Nixpkgs now provides up-to-date versions of Rakudo!
+
 # rakudo-nix
 
 Hopefully up-to-date Nix packages for Rakudo on MoarVM. SEE BELOW FOR
